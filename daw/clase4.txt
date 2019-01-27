@@ -1,0 +1,80 @@
+Java script es la implementacion del lenguaje ECMA script
+
+slack está escrito en js
+
+los lenguajes script son lenguajes interpretados
+
+javascript es debilmente tipado
+
+para declarar variables en javascript se usa la palabra "let"
+
+podemos escribir codigo js en el navegador
+
+se recomienda escribir codigo de js hasta abajo, debido a que modifica
+comportamientos a objetos existentes del DOM
+
+document upload es preferible
+
+number es lo equivalente a un double
+
+los prototipos son al mismo tiempo funciones, objetos y clases
+
+console.log (variable) nos puede decir que valor tiene una variable
+en un momento dado
+
+let y var me permiten declarar variables, difieren en el alcance de la 
+variable con que lo declaramos
+
+cuando no declaramos una variable con var o let el alcance de la variable será
+global
+
+de lo contrario será local
+
+de acuerdo al estandar ECMA se recomienda let en vez de var
+
+tenemos el tipo de dato indefinido (default) y nulo
+
+
+OPERADORES 
+
+===
+compara valor y tipo
+
+tenemos un objeto Math
+
+comentarios con //
+
+funciones se declaran con function
+
+hay funciones anonimas, ejemplo: 
+
+	function(){
+	
+	}
+
+
+let x = function() {
+
+	}
+
+alert nos sirve para desplegar msjs
+
+prompt 		para pedir datos de entrada
+
+json consiste en una notacion de conjunto de pares //como tabla hash
+
+en java script podemos crear la clase y dinamicamente agregarle mas atributos
+ESTO ANTERIOR ES POSIBLE YA QUE ES UN LENGUAJE INTERPRETADO
+
+
+{} significa que es un objeto
+
+los arreglos son dinámicos
+
+
+for ... in ----->	es como el for each en java
+
+
+arreglo.sort() me permite ordenar el arreglo
+
+también existen constructores pero podemos hacer que el objeto se modifique de manera dinamica

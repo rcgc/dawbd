@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<script type="text/javascript" src="Lab4.js"></script>
+	<meta charset="utf-8">
+	<title>Lab 4</title>
+
+</head>
+<body>
+	<div>
+		<h1>Laboratorio 4</h1>
+	</div>
+	<div>
+		<input type="button" name="btn_table" value="1) Tabla" onclick="table_function()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<input type="button" name="btn_random" value="2) Random_sum" onclick="prompt_function()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<input type="button" name="btn_array" value="3) Array_values" onclick="array_values()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<input type="button" name="btn_matrix" value="4) Matrix_avg" onclick="matrix_prom()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<input type="button" name="btn_invert" value="5) Invert_digits" onclick="invert_digits()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<p>6) Determinar si dada la medida de 3 segmentos es posible que estos formen un triangulo:</p>
+		<input type="button" name="btn_problem" value="Resolver" onclick="problem_solving()">
+		<br>
+		<br>
+	</div>
+
+	<div>
+		<br>
+		<p><strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong></p>
+		<br>
+		<table border="1">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Java</th>
+					<th>JavaScript</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Semejanzas</th>
+					<td>
+						<p>Soporta el paradigma orientado a objetos</p>
+						<p>Lanzado en 1995</p>
+					</td>
+					<td>
+						<p>Soporta el paradigma orientado a objetos (con muchas restricciones)</p>
+						<p>Lanzado en 1995</p>
+					</td>
+				</tr>
+				<tr>
+					<th>Diferencias</th>
+					<td>
+						<p>La cantidad de atributos no puede modificarse</p>
+						<p>Es un lenguaje compilado e interpretado</p>
+						<p>Al ser OO emplea clases, herencia, polimorfismo, encapsulamiento, etc.</p>
+						<p>Puede manipular archivos y escribir en el disco duro</p>
+						<p>Fuertemente tipado</p>
+					</td>
+					<td>
+						<p>Gestión de atributos dinámicamente</p>
+						<p>No es un lenguaje compilado sino que es interpretado</p>
+						<p>No utiliza herencia ni clases</p>
+						<p>JavaScript no puede (no sabe) escribir en el disco duro (excepto cookies)</p>
+						<p>Debilmente tipado</p>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot></tfoot>
+		</table>
+		<br>
+
+		<p><strong>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong></p>
+		<p><strong>getFullYear() 		: </strong>Get the year as a four digit number (yyyy) </p>
+		<p><strong>getMilliseconds() 	: </strong>Get the millisecond (0-999)</p>
+		<p><strong>getTime() 			: </strong>Get the time (milliseconds since January 1, 1970)</p>
+		<p><strong>getDay()		 		: </strong>Get the weekday as a number (0-6)</p>
+		<p><strong>Date.now()			: </strong>Get the time. ECMAScript 5.</p>
+		<br>
+
+		<p><strong>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong></p>
+		<p><strong>toString()			: </strong>converts an array to a string of (comma separated) array values.</p>
+		<p><strong>pop()				: </strong>removes the last element from an array.</p>
+		<p><strong>push() 				: </strong>adds a new element to an array (at the end).</p>
+		<p><strong>shift() 				: </strong>removes the first array element and "shifts" all other elements to a lower index.</p>
+		<p><strong>length()				: </strong>provides an easy way to append a new element to an array.</p>
+		<br>
+
+		<p><strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong></p>
+		<p>Declarandola dentro del mismo bloque de la funcion, ahora bien, si se declara fuera del bloque de cualquier funcion, esta sera global, es decir, accedida por cualquier bloque de codigo.</p>
+		<br>
+
+		<p><strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong></p>
+		<p>Estas pueden ser modificada por bloques de código ajenos a las funciones.</p>
+		<br>
+
+		<p><strong>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</strong></p>
+		<p><strong>Match: </strong>Un método String que ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un array de información o null si no existe coincidencia alguna.</p>
+		<p>Podria usar dicho metodo para con ello realizar autocompletado de nombres por ejemplo.</p>
+		<br>
+
+		<p>*Diferentes a los vistos en clase :P</p>
+		<br>
+
+		<p><strong>Referencias: </strong></p>
+		<p>https://www.w3schools.com/js/js_date_methods.asp</p>
+		<p>https://www.codeproject.com/Questions/108988/Using-document-writeln-for-a-simple-html-table</p>
+		<p>https://www.w3schools.com/js/js_array_methods.asp</p>
+		<p>https://www.w3schools.com/jsref/met_win_prompt.asp</p>
+		<p>https://www.w3schools.com/jsref/jsref_random.asp</p>
+		<p>https://www.geeksforgeeks.org/javascript-math-random-function/</p>
+		<p>https://stackoverflow.com/questions/14808480/use-line-break-in-document-write-output</p>
+		<p>https://www.w3schools.com/js/js_arrays.asp</p>
+		<p>https://stackoverflow.com/questions/8301400/how-do-you-easily-create-empty-matrices-javascript</p>
+		<p>https://stackoverflow.com/questions/6351825/reverse-decimal-digits-in-javascript</p>
+		<p>https://www.gestiopolis.com/diferencias-java-javascript/</p>
+		<p>https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions</p>
+		<p>https://www.w3schools.com/js/js_scope.asp</p>
+		<p>https://stackoverflow.com/questions/14496531/adding-two-numbers-concatenates-them-instead-of-calculating-the-sum</p>
+	</div>
+</body>
+</html>
