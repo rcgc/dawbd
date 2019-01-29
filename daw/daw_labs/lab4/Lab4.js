@@ -97,17 +97,28 @@ function problem_solving(){
 	var b = prompt("Valor de b: ");
 	var c = prompt("Valor de c: ");
 
-	var suma1 = +a + +b;
-	var suma2 = +b + +c;
-	var suma3 = +a + +c;
 
-	document.write("<br>Suma a+b: "+suma1);
-	document.write("<br>Suma b+c: "+suma2);
-	document.write("<br>Suma c+a: "+suma3);
-
-	if((+a + +b > c) && (+b + +c > a) && (+a + +c > b)){
-		document.write("<br><br>Si es posible formar un triangulo de lados: "+a+", "+b+" y "+c);
-	}else{
-		document.write("<br><br>No es posible formar un triangulo de lados: "+a+", "+b+" y "+c);
+	class Triangle{
+		constructor(aa, bb, cc){
+			this.a = a;
+			this.b = b;
+			this.c = c;
+		}
+		mostrar(){
+			document.write("<br>Valor de a: "+a);
+			document.write("<br>Valor de b: "+b);
+			document.write("<br>Valor de c: "+c);
+		}
+		evaluar(){
+			if((+a + +b > c) && (+b + +c > a) && (+a + +c > b)){
+				document.write("<br><br>Si es posible formar un triangulo de lados: "+a+", "+b+" y "+c);
+			}else{
+				document.write("<br><br>No es posible formar un triangulo de lados: "+a+", "+b+" y "+c);
+			}	
+		}
 	}
+
+	let triangulo = new Triangle(a,b,c);
+	triangulo.mostrar();
+	triangulo.evaluar();
 }
