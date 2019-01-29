@@ -20,7 +20,12 @@ function table_function() {
 }
 
 function prompt_function(){
+	//Comenzar a contar
+	var start = new Date().getTime();
+
 	let entrada = prompt("Numero a adivinar: ");
+	//Momento en que realizo la entrada
+	var elapsed = new Date().getTime() - start;
 
 	let num1 = Math.floor(Math.random()*10);
 	let num2 = Math.floor(Math.random()*10);
@@ -30,10 +35,12 @@ function prompt_function(){
 		document.write("Has acertado");
 		document.write("<br>"+"Real: "+ suma);
 		document.write("<br>"+"Ingresado: "+ entrada);
+		document.write("<br>"+"Tardaste en escribir tu respuesta: " +elapsed+ " ms");
 	}else{
 		document.write("No has acertado");
 		document.write("<br>"+"Real: "+ suma);
 		document.write("<br>"+"Ingresado: "+ entrada);
+		document.write("<br>"+"Tardaste en escribir tu respuesta: " +elapsed+ " ms");
 	}
 }
 

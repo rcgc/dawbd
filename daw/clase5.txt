@@ -1,0 +1,96 @@
+master 
+
+------------------------------------------
+o 
+|
+|
+|
+o <-- develop
+|
+|
+|
+o
+-------------------------------------------
+Las ramas no son carpetas 
+
+El único warning es cuando nos movemos de rama sin haber hecho commit
+
+Si ya la regamos basta con crear una rama nueva y listo
+
+Hay un comando en git para crear una nueva rama:
+
+CUANDO CREAMOS UNA NUEVA usamos -b(due to this means new branch):
+
+[master] git checkout -b
+
+
+checkout es para cambiarde rama
+el nombre de mi rama no lleva comillas: develop
+
+[develop] git add -A
+
+		git commit -m "mensaje"
+
+		git push origin develop
+
+
+se pueden gestionar permisos de las ramas
+
+en insights hay una gráfica del uso de las ramas
+
+
+
+
+
+
+Si quiero juntar el trabajo de la rama develop con el master debo que haerlo
+desde el destino con el que quiero combinar:
+
+
+
+git checkout master
+
+[master] git pull		podria usar origin master pero se recomienda no
+	
+	git merge develop
+
+	git push origin master
+
+
+
+
+Si tienes el master y una rama develop, se recomienda no tocar ninguna de las
+dos ramas y crear una rama con mi nombre llamada roberto/parteDeMiTrabajo
+
+BUENA PRÁCTICA  (Y)
+
+master
+o
+|
+|
+|
+o---------------------------------------develop
+ |					|
+ |					|
+ |					|
+ o- roberto/parteDeMiTrabajo		o- adrian/RF1	git checkout -b RF1
+  |					 |		git add -A
+  |					 |		git commit -m "msj"
+  |					 |		git push
+  o					 o		git checkout develop
+							git merge adrian/RF1
+							git push
+
+cuando dos personas modifican la misma linea de codigo da origen a 
+conflictos para hacer merge
+
+DOS TIPO DE practicas
+
+practica de integracion continua  <-- This one :D
+integrar inmediatamente el trabajo para evitar conflictos
+
+
+practica avanzada
+
+
+el comando git branch -d		me permite borrar una rama
