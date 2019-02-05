@@ -12,71 +12,80 @@ function results(){
   document.write(comments + "<br>");
 }
 
-$('.visibility-cart').on('click',function(){
-       
-  var $btn =  $(this);
-  var $cart = $('.cart');
-  console.log($btn);
+/* Set rates + misc */
+var taxRate = 0.05;
+var shippingRate = 15.00; 
+var fadeTime = 300;
+
+
+/* Assign actions */
+$('.product-quantity input').change( function() {
+  updateQuantity(this);
+});
+
+$('.product-removal button').click( function() {
+  removeItem(this);
+});
+
+
+/* Recalculate cart */
+function recalculateCart()
+{
+  var subtotal = 0;
   
-  if ($btn.hasClass('is-open')) {
-     $btn.removeClass('is-open');
-     $btn.text('O')
-     $cart.removeClass('is-open');     
-     $cart.addClass('is-closed');
-     $btn.addClass('is-closed');
-  } else {
-     $btn.addClass('is-open');
-     $btn.text('X')
-     $cart.addClass('is-open');     
-     $cart.removeClass('is-closed');
-     $btn.removeClass('is-closed');
-  }
+  /* Sum up row totals */
+  $('.product').each(function () {
+    subtotal += parseFloat($(this).children('.product-line-price').text());
+  });
+  
+  /* Calculate totals */
+  var tax = subtotal * taxRate;
+  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var total = subtotal + tax + shipping;
+  
+  /* Update totals display */
+  $('.totals-value').fadeOut(fadeTime, function() {
+    $('#cart-subtotal').html(subtotal.toFixed(2));
+    $('#cart-tax').html(tax.toFixed(2));
+    $('#cart-shipping').html(shipping.toFixed(2));
+    $('#cart-total').html(total.toFixed(2));
+    if(total == 0){
+      $('.checkout').fadeOut(fadeTime);
+    }else{
+      $('.checkout').fadeIn(fadeTime);
+    }
+    $('.totals-value').fadeIn(fadeTime);
+  });
+}
 
-                  
-});
 
-    // SHOPPING CART PLUS OR MINUS
-    $('a.qty-minus').on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        var $input = $this.closest('div').find('input');
-        var value = parseInt($input.val());
-    
-        if (value > 1) {
-            value = value - 1;
-        } else {
-            value = 0;
-        }
-    
-    $input.val(value);
-        
+/* Update quantity */
+function updateQuantity(quantityInput)
+{
+  /* Calculate line price */
+  var productRow = $(quantityInput).parent().parent();
+  var price = parseFloat(productRow.children('.product-price').text());
+  var quantity = $(quantityInput).val();
+  var linePrice = price * quantity;
+  
+  /* Update line price display and recalc cart totals */
+  productRow.children('.product-line-price').each(function () {
+    $(this).fadeOut(fadeTime, function() {
+      $(this).text(linePrice.toFixed(2));
+      recalculateCart();
+      $(this).fadeIn(fadeTime);
     });
+  });  
+}
 
-    $('a.qty-plus').on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-        var $input = $this.closest('div').find('input');
-        var value = parseInt($input.val());
 
-        if (value < 100) {
-        value = value + 1;
-        } else {
-            value =100;
-        }
-
-        $input.val(value);
-    });
-
-// RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
-$('input').on('blur', function(){
-
-    var input = $(this);
-    var value = parseInt($(this).val());
-
-        if (value < 0 || isNaN(value)) {
-            input.val(0);
-        } else if
-            (value > 100) {
-            input.val(100);
-        }
-});
+/* Remove item from cart */
+function removeItem(removeButton)
+{
+  /* Remove row from DOM and recalc cart total */
+  var productRow = $(removeButton).parent().parent();
+  productRow.slideUp(fadeTime, function() {
+    productRow.remove();
+    recalculateCart();
+  });
+}
