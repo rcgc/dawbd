@@ -1,0 +1,57 @@
+--------------------------------------------------------------------------
+.dtd 	es debido a estandares que antiguamente se quisieron definir
+
+
+con que diga 
+
+<!DOCTYPE HTML ...mas cosas...> 
+
+ya es HTML5
+-----------------------------------------
+
+no debes que meter css en el doc HTML
+
+usar <header> instead of id="header"
+
+Es mejor usar tamaños relativos a absolutos
+
+
+width del table ya no se debe que ocupar
+border SÍ
+
+
+alt es un atributo obligatorio si no está no es HTML del todo
+debido a los débiles visuales
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+function mostrar_pregunta(){
+	document.getElementById("respuesta").innerHTML
+
+}
+
+// llamo a la funcion solo cuando ejecuto el evento y no al cargar la pagina
+
+document.getElementById("pregunta_diferencias").onclick = mostrar_pregunta;
+
+
+
+
+en java script podemos asignar una funcion como variable
+(podríamos verlo como si fuese un apuntador)
+
+
+
+<div></div> es un bloque
+
+<span></span> una línea
+

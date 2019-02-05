@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="functions.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+	<title>lab 5</title>
+</head>
+<header>
+		<div class="container">
+			<h1>Laboratorio 5</h1>	
+		</div>
+</header>
+<body>
+	
+	<br>
+
+	<div class="container">
+		<p>Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para validar passwords. La página debe tener una forma con 2 campos, el campo de password, y el campo de verificar password. Utiliza al máximo tu creatividad e ingeniería para que la página sea un validador de passwords de <strong> estado del arte</strong>, con la mejor experiencia para el usuario.</p>	
+	</div>
+	
+	<br>
+
+	<div class="row">
+		<div class="col s6 offset-s3">
+			<div class="container login">
+				<form method="POST" action="" onsubmit="return checkForm(this);">
+					<p id="etiqueta">Username: <input title="Enter your username" type="text" required pattern="\w+" name="username" id="username"></p>
+					
+					<p id="etiqueta">Password: <input title="Password must contain at least 6 characters, including UPPER/lowercase and numbers" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pwd1" id="pwd1" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); if(this.checkValidity()) form.pwd2.pattern = RegExp.escape(this.value);"></p>
+					
+					<p id="etiqueta">Confirm Password: <input title="Please enter the same Password as above" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="pwd2" id="pwd2" onchange="this.setCustomValidity(this.validity.patternMismatch ? this.title : '');
+					"></p>
+
+					<p><input type="submit" value="Save Changes"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="container">
+		<p>Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para vender 3 productos de tu interés, con los precios y promociones a tu gusto. La página debe permitir al usuario escoger la cantidad de unidades de cada producto, y debe mostrar el precio total, el IVA que se está cargando, y toda la información que consideres pertinente para que la experiencia del usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto.</p>	
+	</div>
+
+	
+
+	<div class="container">
+		<p>Con JavaScript y HTML5 y CSS, desarrolla una página con alguna temática o problema de tu interés. La página debe contener una forma y debes realizar las validaciones necesarias. Después de validar la forma, la página debe desplegar información relacionada con los datos introducidos en la forma, es decir, la solución del problema o información respectiva a los datos introducidos.</p>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="col s6 offset-s3">
+			<div class="container formulario">
+				<form onsubmit="return results();" method="post" action="">
+					<h5>Enter name:</h5>
+					<input id="name" type="text" name="name">
+
+					<h5>Enter Email:</h5>
+					<input id="email" type="text" name="email">
+
+					<h5>Leave a comment</h5>
+
+					<textarea id="comments" name="comments" rows="6" cols="40"></textarea>
+
+					<br>
+					<br>
+
+					<input id="submit" type="submit" value="Send form data now!">
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="container">
+		<h3>Preguntas</h3>
+	</div>
+
+	<div class="container">
+		<p>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</p>
+		<div class="card-panel indigo lighten-4">
+			<p>Es una buena práctica por el hecho de que con ello logramos evitar que los datos viajen al servidor con un formato especifico aunado al hecho de que podemos respetar el tipo de dato que queremos procesar. Sin embargo, tratándose de persistencia de los datos, un SGBD nos permite validar los datos al momento intentar que estos se almacenen.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</p>
+		<div class="card-panel indigo lighten-4">
+			<p>En algunos casos en los forms puedes usar la tecla enter, tab o bien inyección de código.</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<p>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</p>
+		<div class="card-panel indigo lighten-4">
+			<p>Para tratar de evitar todo lo posible la presencia de datos indeseados o no válidos como entrada de un form.</p>
+		</div>
+	</div>
+
+</body>
+<footer>
+	
+</footer>
+</html>

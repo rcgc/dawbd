@@ -93,4 +93,25 @@ integrar inmediatamente el trabajo para evitar conflictos
 practica avanzada
 
 
+
+git log los cambios en una rama
+q 	-----> para quitar le listado
+
+git ls-files los archivos en el repositorio
+
+
+
+
 el comando git branch -d		me permite borrar una rama
+
+
+
+PARA PONERLE EVENTOS AL HTML
+Siempre y cuando incluya el archivo js al final del documento html
+
+document.getObjectById("").event = alert("Mensaje");
+
+
+FIREFOX es un branch de netscape
+
+navigator.appName    ----> me arroja el nombre de mi navegador
