@@ -1,0 +1,46 @@
+Framework de frontend: 
+
+-nos sirven porque los programadores web no somos expertos diseñando
+
+-materialize (material design es un lenguaje visual creado por google)
+-bootstrap
+-antes de bootstrap fue foundation
+
+-la mayoria incluye un js y un css para funcionar
+
+-llamar un css con link de la red....lo carga en cache
+
+-conviene meter los archivos .js en un directorio llamado js
+-meter los .css en un directorio llamado css
+
+Parallax en js es el evento de que la imagen hace scroll de forma diferente 
+a el scroll de la ventana
+
+
+			R E S P O N S I V E
+
+Grid es el sistema que usa materialize para hacer responsivo
+
+Materialize usa un grid simetrico
+
+Y cada seccion podemos dividirla en 12 partes iguales (asi lo hace materialize)
+
+En materialize hay 3 tipos de pantallas
+s  short
+m  medium
+l  large
+xl extra large
+
+s 12
+m 6
+l 3
+
+flow-text hace que el texto cambie de tamaño
+
+conocer como funciona el grid
+
+paginacion: para recuperar una sola parte de la informacion y evitar 
+
+en vez de alert tenemos modals
+
+toast notificaciones

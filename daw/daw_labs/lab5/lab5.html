@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <script src="functions.js"></script>
+    <script src="cart.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 
 	<title>lab 5</title>
 </head>
@@ -50,7 +55,105 @@
 		<p>Con JavaScript y HTML5 [y quizás CSS], desarrolla una página para vender 3 productos de tu interés, con los precios y promociones a tu gusto. La página debe permitir al usuario escoger la cantidad de unidades de cada producto, y debe mostrar el precio total, el IVA que se está cargando, y toda la información que consideres pertinente para que la experiencia del usuario sea la mejor. La página debe validar los rangos de las unidades de cada producto.</p>	
 	</div>
 
-	
+	<br>
+
+	<div>
+		<div>
+    		<h3 class="center-align">Bookshop</h3>
+  		</div>
+	  	<div class="row">
+	    	<div class="col s2 offset-s2">
+		      	<div class="card small">
+		        	<div class="card-image">
+		          		<img src="images/book1.jpg">
+		        	</div>
+		        	<div class="card-content">
+		          		<p>The mythical man-month</p>
+		          		<p>$400.00</p>
+		          		<p>+IVA: $464.00</p>
+		        	</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick='add1()'>+1</a>
+					</div>
+					<div class="col s3 offset-s2" id="campo">
+						<input readonly type="text" id="campo1" value="0">
+					</div>
+					<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick='rest1()'>-1</a>
+					</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="col s2 offset-s1">
+		      	<div class="card small">
+		        	<div class="card-image">
+		          		<img src="images/book2.jpg">
+		        	</div>
+		        	<div class="card-content">
+		          		<p>Operating system concepts</p>
+		          		<p>$2000.00</p>
+		          		<p>+IVA: $2320.00</p>
+		        	</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick="add2()">+1</a>
+					</div>
+					<div class="col s3 offset-s2" id="campo">
+						<input readonly type="text" id="campo2" value="0">
+					</div>
+					<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick="rest2()">-1</a>
+					</div>
+		    	</div>
+	    	</div>
+
+	    	<div class="col s2 offset-s1">
+		      	<div class="card small">
+		        	<div class="card-image">
+		          		<img src="images/book3.jpg">
+		        	</div>
+		        	<div class="card-content">
+		          		<p>The art of computing programming</p>
+		          		<p>$3700.00</p>
+		          		<p>+IVA: $4292.00</p>
+		        	</div>
+		    	</div>
+		    	<div class="row">
+		    		<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick="add3()">+1</a>
+					</div>
+					<div class="col s3 offset-s2" id="campo">
+						<input readonly type="text" id="campo3" value="0">
+					</div>
+					<div class="col s2 offset-s1">
+						<a class="waves-effect waves-light btn-small" onclick="rest3()">-1</a>
+					</div>
+		    	</div>
+	    	</div>
+
+			<br>
+			<br>
+
+	    	<div class="col s8 offset-s2">
+	    		<div class="col s2 offset-s4" id="campo">
+					<h5>Total:</h5>
+				</div>
+	    		<div class="col s2 offset-s1" id="campo">
+					<input readonly type="text" name="total" id="total" value="$ 0.00">
+				</div>
+				<div class="col s2 offset-s1">
+					<a class="waves-effect waves-light btn-large" onclick="calculate_total()">Check</a>
+				</div>
+	    	</div>
+	  	</div>
+  	</div>
+
+  	<br>
+  	<br>
+  	<br>
 
 	<div class="container">
 		<p>Con JavaScript y HTML5 y CSS, desarrolla una página con alguna temática o problema de tu interés. La página debe contener una forma y debes realizar las validaciones necesarias. Después de validar la forma, la página debe desplegar información relacionada con los datos introducidos en la forma, es decir, la solución del problema o información respectiva a los datos introducidos.</p>
