@@ -1,0 +1,18 @@
+Las bases de datos emplean las siguientes estructuras de datos: 
+-arboles B
+-hash tables
+
+Especificar los valores que pueden estar por default
+Riesgo: lo que involucra no implementar ese requisito
+
+
+existen 3 tipos de restricciones:
+clave primaria
+clave foranea 
+validacion por check 
+
+ver como se resuelve el problema de que tengamos 159 jugadores inscritos y luego 
+2 quieran inscribirse al mismo tiempo
+
+interesado es aquella persona de un departamento que de manera directa se ve
+afectada
