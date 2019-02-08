@@ -2,18 +2,61 @@
 <html>
 <head>
 	<title>Lab 6</title>
+	<script src="functions.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <header>
-	<div>
-		<h1>Laboratorio 6</h1>
+	<div class="b">
+		<div>
+			<h1>Laboratorio 6</h1>
+		</div>
 	</div>
 </header>
 <body>
 
+	<br>
+
+		<div class="e">
+		<h5 class="vi">Texto visible</h5>
+		<p id="parr">Texto a ocultar</p>
+		<h5 class="invi">Texto invisible</h5>
+		<button type="button" onclick="ocultar()">Ocultar texto</button>
+		<button type="button" onclick="mostrar()">Mostrar texto</button>
+	</div>
+	<div id="myDIV" class="b" onclick="fun1()">
+		<p>Click para modificar style position de este texto</p>
+	</div>
+	<div><p id="myP" onmouseover="fun2()" onmouseout="fun3()">Este texto se mostrará en cursiva cuando coloques el cursor sobre de él.</p></div>
+
+	<div>
+		<div class="e">
+			<p><strong>Text field que mostrará un texto de ayuda al hacer clic sobre de él</strong></p>
+			<input type="text" name="textf" onclick="mostrar_ayuda()" ondblclick="ocultar_ayuda()">
+			<p id="aux"> </p>
+		</div>
+	</div>
+	<div>
+		<div class="e">
+			<button type="button" onclick="mensaje()">Mostrar mensaje 1s después</button>	
+		</div>
+	</div>
+
 	<div class="container">
-		<p>¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</p>
-		<p>¿Cuáles son los valores estándar para la propiedad visibility?</p>
-		<p>¿Qué es el zIndex y para qué sirve?</p>
+		<div class="c">
+			<div class="d">
+				<h2>Sección</h2>
+				<h3>de preguntas</h3>
+			</div>
+
+			<br>
+			
+			<p class="small">¿Cuáles son las diferencias entre los posibles valores de la propiedad position?</p>
+			<p>Respuesta</p>
+			<p class="oblique">¿Cuáles son los valores estándar para la propiedad visibility?</p>
+			<p>Respuesta</p>
+			<p class="thicker">¿Qué es el zIndex y para qué sirve?</p>
+			<p>Respuesta</p>
+		</div>
 	</div>
 
 </body>
