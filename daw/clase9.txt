@@ -1,0 +1,85 @@
+PHP = PHP Hypertext Preprocessor
+
+Apache --> parche sobre parche
+
+
+Servers 
+
+IIS 	---> Microsoft
+NGINX
+Tomcat	---> Java
+Apache
+
+
+
+A veces apache guarda en este directorio los archivos
+httpd.conf
+apache.conf
+
+el de PHP es php.ini
+
+
+las variables las identificamos son el $
+$variable
+
+tenemos las mismas estructuras dee control que conocemos en c
+
+
+las estructuras de datos son asociativas, tipo tabla hash, diccionario
+
+
+<?php
+	echo "USAMOS ESTAS TAGS PARA INDICAR QUE ES SCRIPT PHP A EJECUTAR";
+?>
+
+PHP es orientado a objetos y procedural
+
+
+index.php
+
+/htdocs
+/public_hmtl
+/www
+
+
+en php se concatena con un punto . en vez usar +
+
+"Hola"."Mundo"
+
+si un usuario quiere ver que tiene mi index, creo un index.html que vera el 
+usuario
+
+o podemos mandarle un error 404
+
+
+acceso 777 no debe estar para los demás
+
+755 <--- investigarlo
+
+644 es el más comun
+
+
+
+
+FUNCIONES
+
+
+function tabla_multiplicar(){
+
+	
+}
+
+
+util.php es un nombre comun que se le da a las librerias 
+
+
+
+include es como concatenar archivos
+include once se manda a llamar una sola vez
+
+
+php.info();
+
+info de php
+
+gd es para procesamiento de gráficos

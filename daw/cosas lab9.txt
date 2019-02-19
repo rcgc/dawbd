@@ -1,0 +1,23 @@
+instalar xampp
+
+hacer que el servidor lea los .php
+
+-----------------------------------------------------
+
+leer array y ordenarlo
+
+leer array y devolver la mediana
+
+leer array, muestre array, muestre promedio, mediana, arreglo ordenado ascendentemente, y luego ordenado descendentemente
+
+tabla que muestre cuadrados y cubos desde 1 hasta n
+
+Problema libre
+
+---------------------------------------------------------
+
+¿Qué hace la función phpinfo()? Describe y discute 3 datos que llamen tu atención.
+
+¿Qué cambios tendrías que hacer en la configuración del servidor para que pudiera ser apto en un ambiente de producción?
+
+¿Cómo es que si el código está en un archivo con código html que se despliega del lado del cliente, se ejecuta del lado del servidor? Explica.

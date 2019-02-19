@@ -1,0 +1,95 @@
+	U 	 N	 I	 O 	N 
+a + b
+
++ 	operador
+a, b 	operandos (relaciones, tablas)
+
+
+
+*cardinalidad es el numero de tuplas que tiene la relacion (registros/renglones/filas)
+
+*P U Q (deben tener mismo grado y dominio) el resultado son tuplas que pueden estar en P y Q
+
+*Union es binario, conmutativo, mismo grado y dominio y el resultado tuplas con mismo dominio y grado que pueden estar en P y Q
+
+
+
+
+	I N T E R S E C C I O N
+
+Es el operador binario, conmutativo, operantos mismo dominio y grado, sus tuplas deben que estar en a y b
+
+
+
+* Interseccion y union se usan mucho en bases de datos distribuidas
+* En bases de datos centralizadas raramente se usan
+
+
+
+	D I F E R E N C I A
+
+Es el operador binario, no conmutativa, operandos mismo dominio y grado, dados los operandos A y B su resultado serán las tuplas de A que no estarán en B
+
+
+
+	P R O Y E C C I O N
+
+Es un operador unario horizontal, no hay restriccion de grado y dominio, donde especifico las columnas que quiero seleccionar
+
+
+	S E L E C C I O N
+
+Es un operador unario vertical, no hay restriccion de grado y dominio y 
+
+
+
+	C O N J U N C I O N (Join natural ><)
+
+No respeta grado ni dominio, al menos un campo en comun, 
+
+Join natural es lo que mas cuesta computacionalmente, es recomendable hacer un filtro antes de un join natural
+
+
+Hacer un join natural con productos cartesianos es un error
+
+	
+	T E T A 	J O I N
+
+Como un pero con condiciones
+Deben que cumplirse las condiciones en join y teta join
+
+Operadores algebra relacional AND OR
+
+
+
+Entre menos tablas mejor...
+
+Calculo relacional: sigue despues de algebra relacional (trato de evitar repeticion de tuplas)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PI(descripcion) MATARIALES   NOOOOOOOOOOOOOOO
+
+
+PI(descripcion)[SIGMA(clave>2000 AND precio<100) MATERIALES]
+PI(denominacion,descripcion,razonsocial)[{PROVEEDORES{MATERIALES(PROYECTOS >< {SIGMA(fecha >= "01/01/1997" AND fecha <= "31/12/1997") [ENTREGAN]})}]
+
+
+
+
+
+Alfanumérico uso 'caracteres'

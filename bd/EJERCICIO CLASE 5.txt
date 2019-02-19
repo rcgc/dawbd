@@ -1,0 +1,50 @@
+*Llave candidata: la mas simple debe que ser la llave primaria, se recomienda que no sea alfanumérica
+
+* (MR)Tablas o relaciones, MR(Grado se relaciona con el numero de columnas)
+* MER Tablas
+
+
+Cliente(RFCC,RazonSocial,Domicilio)
+
+PK -> RFCC
+AK -> No tiene
+AK -> RazonSocial, Domicilio
+
+
+
+*Llaves foraneas pueden ser nulas
+*Claves primarias no pueden ser nulas
+
+
+
+Facturas(NoFactura,fecha,Status, RFCC)	
+
+PK -> NoFactura
+FK -> RFCC
+AK -> NoFactura,fecha
+
+
+
+Productos(CBarras,Nombre,Descripcion,Precio, Existencia)
+PK -> (CBarras,NoFactura)
+FK1 -> CBarras
+FK2 -> NoFatura
+AK -> CBarras,Nombre
+
+* Venta no requiere fecha puesto que Factura me garantiza la unicidad
+
+Ventas(NoFactura,CBarras,Cantidad)
+PK -> (CBarras,NoFactura)
+FK -> NoFactura,CBarras
+AK -> 
+
+Poveedor(RFCP,RazonSocial,Domicilio,Contacto)
+PK -> RFCP
+FK -> N/A
+AK -> RazonSocial,Domicilio
+
+Surte(RFCP,CBarras,Fecha,Cantidad)
+PK -> (CBarras,RFCP)
+FK1 -> RFCP
+FK2 -> CBarras
+AK -> RFCP,CBarras,Fecha,Cantidad

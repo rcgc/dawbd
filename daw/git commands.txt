@@ -1,0 +1,25 @@
+*siempre que se comience a trabajar con algo nuevo se recomienda crear una nueva rama
+
+		git checkout -b rama/otrotrabajo
+
+git checkout -b nrama	---> Nueva rama
+
+origin 			---> Hace referencia a github
+
+git commit -m "mensaje" ---> sincroniza el repo
+
+pull 			---> jalar los últimos cambios con la rama de github
+
+push			---> empujar los cambios a la rama en github
+
+git push origin master 	---> sincroniza el master con la rama
+
+
+
+
+
+git merge --abort  para abortar el merge
+
+Sass es como un preprocesamiento css, una capa encima del .css
+
+https://nvie.com/posts/a-successful-git-branching-model/
