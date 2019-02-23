@@ -17,7 +17,7 @@ a, b 	operandos (relaciones, tablas)
 
 	I N T E R S E C C I O N
 
-Es el operador binario, conmutativo, operantos mismo dominio y grado, sus tuplas deben que estar en a y b
+Es el operador binario, conmutativo, operandos mismo dominio y grado, sus tuplas deben que estar en a y b
 
 
 
@@ -55,7 +55,7 @@ Hacer un join natural con productos cartesianos es un error
 	
 	T E T A 	J O I N
 
-Como un pero con condiciones
+Como join natural un pero con condiciones
 Deben que cumplirse las condiciones en join y teta join
 
 Operadores algebra relacional AND OR

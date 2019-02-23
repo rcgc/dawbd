@@ -1,10 +1,14 @@
 <?php
 	 function encabezado() {
-        include("resources/_header.html");
+        include("includes/_navbar.html");
     }
 
      function footer() {
-        include("resources/_footer.html");
+        include("includes/_footer.html");
+    }
+
+    function questions(){
+        include("includes/_questions.html");   
     }
 
     function imprimir_titulo($titulo) {

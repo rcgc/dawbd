@@ -1,0 +1,81 @@
+* Se recomienda usar palabras reservadas en MAYUSCULAS
+* SQL no es sensible a mayusculas/minusculas
+
+---------------------------------------------------------
+	E S T A N D A R		V I E J O
+
+* La proyeccion es una seleccion
+* La seleccion es un filtro
+* El join natural es un where
+---------------------------------------------------------
+
+* Join en el from no en el where
+	E S T A N D A R		N U E V O
+* Compilado: todo tiene un significado individual
+* Interpretado: todo tiene un significado en bloque
+
+
+
+Select Descripcion From Materiales	----> Operador de proyeccion (PI)
+
+
+
+Select Descripcion, Costo 		----> Seleccion
+From Materiales 
+WHERE Costo > 1000
+
+
+
+Select * 				----> Join natural
+From Materiales, Entregan
+Where Materiales.Clave = Entregan.Clave
+
+
+
+Select M.Clave				----> Si se olvida el from obtengo
+From Materiales as M, Entregan as E	----> un producto cartesiano
+Where M.Clave = E.Clave			----> aquí uso alias para evitar 
+					----> nombres largos
+					----> quitan el as tambien jala :)
+
+
+Select M.Clave, Descripcion		----> Mostrar clave y descripcion
+From Materiales M, Entregan E		----> de los productos entregados
+Where M.Clave = E.Clave
+
+
+
+
+SELECT M.Clave, Descripcion, Count(*) 	----> Cuenta el numero de repeticiones
+FROM Materiales M, Entregan E		---->  
+WHERE M.Clave = E.Clave			----> 
+GROUP BY M.Clave M.Descripcion		----> Debo incluir los que se repiten
+
+
+
+SELECT M.Clave, Descripcion, Sum(Cantidad) as 'Total'
+FROM Materiales M, Entregan E		----> Alias de columnas
+WHERE M.Clave = E.Clave			----> Genero dinamicamente
+GROUP BY M.Clave M.Descripcion		----> Columnas nuevas a traves de
+					----> Dinamicas
+
+() Agrupar operadores
+[] Arreglos
+{} 
+
+
+SELECT M.Clave,Descripcion, SUM(Cantidad) as 'Total'
+FROM Materiales M, Entregan E		-----> Especificar condiciones 
+WHERE M.Clave = E.Clave			-----> con funciones agregadas
+GROUP BY M.Clave,Descripcion
+HAVING SUM(Cantidad) > 1000		-----> Having no respeta el alias
+ORDER BY Total DESC			-----> Ordenar de forma descendente
+
+
+
+
+
+
+SELECTO M.Clave,Descripcion, SUM(Cantidad) s 'Total'
+FROM Materiales M, Entregan E
+WHERE M.Clave = E.Clave AND Descripcion LIKE '_a%'
