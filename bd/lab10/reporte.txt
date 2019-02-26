@@ -1,0 +1,37 @@
+		L A B 	1 0
+
+1)¿Que muestra la instrucción? 
+
+Informacion sobre mi tabla que acabo de crear, en este caso, sobre la tabla materiales, muestra sus tipos de datos acorde a los campos con los que cuente
+
+
+
+2)¿Qué efecto tuvo esta acción?
+
+Desplegó una nueva pestaña
+
+
+
+3)¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+
+Me puede crear tantos archivos nuevos como yo desee con la misma conexión sin mezclar los mismos comandos en la misma pestaña
+
+
+
+
+4)¿Qué relación tienen con las tablas de la base de datos?
+
+Tienen los mismo campos pero separados por campos
+
+
+
+5)¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+
+Albergan el mismo contenido debido a que se importaron sus registros
+
+
+
+
+6) ¿Qué sucedió?
+	SELECT  * FROM Materiales
+Me mostró los registros migrados a una bd en sql provenientes de un formato .csv
