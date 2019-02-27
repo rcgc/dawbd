@@ -207,6 +207,31 @@
 
     function exercise5(){
         include("includes/_ex5.html");   
+        if(isset($_POST['btn5'])){
+                $value = $_POST['txt5'];
+                primo($value);
+        }
     }
 
+    function primo($n){
+        
+        echo "<div class= 'container'>";
+        echo "<div class= 'center-align'>";
+
+        for($i=2 ; $i*$i<=$n; ++$i){
+            if($n%$i == 0){
+                echo "<strong>".$n."</strong> no es primo.";
+                echo "</div>";
+                echo "</div>";
+                echo "<br>";
+                return 0;
+            }
+        }
+        echo "<strong>".$n."</strong> si es primo.";
+
+        echo "</div>";
+        echo "</div>";
+        echo "<br>";
+        return 0;
+    }
 ?>  
