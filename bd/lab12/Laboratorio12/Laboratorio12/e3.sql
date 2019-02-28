@@ -1,0 +1,1 @@
+   INSERT INTO entregan values (1000, 'AAAA800101', 5000, GETDATE(), 0); 

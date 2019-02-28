@@ -1,0 +1,39 @@
+SoD	Separation of Duty (or concerns)
+
+
+Vamos a Separar lo que es controlador de la vista
+
+
+
+
+	|Controlador	|	Vista
+				html		(todo lo que sea vistas aquí)	
+				parcials	()
+
+	controlador
+	inicial
+	index.php
+
+
+var_dump($_POST) 	para visualizar el valor de las variables
+
+
+la finalidad de validar cosas con js es para evitar enviar datos al servidor, se validen en este y que espere por la respuesta
+
+
+
+
+
+<?php if(isset): ?>		abre llave if
+
+<? endif?>			cierra llave if
+
+
+
+htmlspecialchars
+htmlentities
+
+
+cross-site scripting 		mandar un script a un sitio y hacer cosas con código para atacar un sistema
+
+

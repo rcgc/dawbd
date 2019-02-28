@@ -1,0 +1,39 @@
+SELECT m.Clave, m.Descripcion, e.RFC, m.Costo, e.Cantidad
+FROM Entregan e, Materiales m
+WHERE e.Clave=m.Clave
+
+
+
+
+
+
+m.Costo*e.Cantidad as 'Costo Total'
+
+
+GROUP BY 	agrupa de acorde a criterios para evitar que se repitan 
+		(SQL Server debes incluir todos los que se repiten)
+
+
+Siempre que tengas una funcion agregada utilizamos el GROUP BY
+
+
+SELECT DISTINCT 	No me repite
+
+
+
+
+LAS BASES DE DATOS TIENEN 7 FORMAS NORMALES (ESTANDO EN LA 3 ES SUFICIENTE)
+
+Una vista en una BD se comporta igual que una tabla, es una consulta que se guarda como tabla
+
+En la vista los datos están almacenados previamente, la vista se actualiza a la par de la base de datos
+
+
+	I N T E G R I D A D
+	R E F E R E N C I A L
+
+	- Principio de proporcionalidad
+	- Principio de causalidad
+
+
+* Hacer software es muy caótico

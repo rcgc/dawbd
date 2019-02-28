@@ -1,0 +1,1 @@
+ALTER TABLE Entregan ADD CONSTRAINT llaveEntregasn PRIMARY KEY CLUSTERED (Clave,RFC,Numero,Fecha) 

@@ -1,0 +1,83 @@
+*	Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe? 
+
+Sí la hay, tengo dos materiales con la misma clave, se debe a que no especificamos mediante código el hecho de que la PK no se repita
+
+
+¿Qué ocurrió?
+*	No se pudo crear debido a que el registro que segun se borro quedo registrado en la bd pero como un valor nulo del cual ya se guarda su ID, por ello se debe que crear el ID al principio
+
+* 	Al hacer las cosas bien ahora aparece:
+	Violation of PRIMARY KEY constraint 'llaveMateriales'
+
+¿Qué información muestra esta consulta?
+* 	En el caso de cuando no se pudo crear mostraba un cuadro en blanco
+*	Cuando ya se pudo crear mostró información sobre el contraint que hay
+referente al PK de la tabla materiales
+
+¿Qué sentencias utilizaste para definir las claves primarias?
+*	ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC) 
+*	ALTER TABLE Proyectos add constraint llaveProyectos PRIMARY KEY (Numero) 
+
+
+
+
+¿Qué sentencias utilizaste para definir este constrait? 
+*	ALTER TABLE Entregan ADD CONSTRAINT llaveEntregasn PRIMARY KEY CLUSTERED (Clave,RFC,Numero,Fecha) 
+
+
+EJERCICIO 3
+
+
+¿Qué particularidad observas en los valores para clave, rfc y numero? 
+No es un patrón válido, sin embargo permitión insertarlo
+
+
+¿Cómo responde el sistema a la inserción de este registro? 
+*	Permitió insertarlo porque no se han especificado reglas que deban respetar
+los registros de cada campo
+
+
+¿Qué significa el mensaje que emite el sistema? 
+*	Hay un conflicto con la llave forenea
+
+
+¿Qué significado tiene la sentencia anterior?
+*	La llave debe que exitir en otra tabla (Materiales) para poder hacer alguna inserción
+
+
+
+¿Qué significan las columnas de esas consultas?
+	nombre del constraint
+	permiso para borrarlo
+	permiso para actualizarlo
+	¿está activado?
+	Estatus de replicación
+
+
+¿Qué uso se le está dando a GETDATE()? 
+	* Obtener fecha actual
+
+
+
+¿Tiene sentido el valor del campo de cantidad? 
+	* No, ello significaria entregas vacias, aunado al hecho de permitir guardar muchas de ellas y llenariamos la bd de basura
+
+Lo borro usando: 
+Delete from Entregan where Cantidad = 0
+
+
+
+
+¿Cómo responde el sistema? 
+*	Conflicto con el constraint establecido, no se puede agregar
+
+
+¿Qué significa el mensaje? 
+*	Que no se puede agregar un registro con dicho valor para el atributo cantidad debido a que hay un constraint que lo impide (debe ser mayor a 0 '> 0')	
+
+
+
+Definición personal: Integridad referencial se refiere al hecho de que cuando se haga referencia a una tabla externa, deberá que haber valores que exitan en la tabla externa a la que se haga referencia, en este caso, la tabla entregan.
+
+
+Otras referencias de interés: https://www.aulaclic.es/sql/b_8_1_1.htm
