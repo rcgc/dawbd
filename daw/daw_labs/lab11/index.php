@@ -15,7 +15,9 @@
 
 	action_form1();
 
-	imprimir_subtitulo("<div class='container'><h5 class='left-align'>Ejercicio personal</h5></div><br>");
+	imprimir_subtitulo("<div class='container'><h5 class='left-align'>Ejercicio personal</h5></div><br>");	
+
+	call_btn();
 
 	imprimir_subtitulo("<br><div class='container'><h3 class='left-align'>Preguntas</h3></div><br>");
 

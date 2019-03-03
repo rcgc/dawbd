@@ -43,4 +43,20 @@
         }
     }
 
+    function form2(){
+        include("includes/_form2.html");
+    }
+
+    function action_form2(){
+        include("registro_jugador.php");
+    }
+
+    function info($mensaje) {
+        $mensaje = "<div class='container''>".$mensaje."</div>";
+        echo $mensaje;
+    }
+
+    function call_btn(){
+        include("includes/_btn_ep.html");   
+    }
 ?>  

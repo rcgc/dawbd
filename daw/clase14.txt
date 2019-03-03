@@ -1,0 +1,89 @@
+
+Si no hay una sesion activa la crea, si hay una activa la recupera
+
+session_start()
+
+
+
+
+$_SESSION[]		Guarda todo respecto a la sesion en un array asociativo
+
+LOGOUT
+
+session_unset()		mata las variables de sesion
+session_destroy()	
+
+
+
+
+session_start();		recupero
+echo _SESSION[xd];
+
+
+
+se puede pedir autenticar el usuario simulando una intranet
+
+login.php
+
+<?php 
+
+	session_Start();
+
+	if(isset(_$POST["email"]) && isset($_POST["password"])){
+		$usuario = login(htmlspecialchars($_POST), htmlspecialchars($_POST["password"]));
+
+		if($usuario != ""){
+			$_SESSION["usuario"] = $usuario;
+			header("location:index.php");
+		}else{
+			$error = "Usuario y/o contraseña incorrectos";
+			include("_login.hmtl");
+		}
+	}else{
+		$error = "Usuario y/o contraseña incorrectos";
+		include("_login.hmtl");
+	}
+?>
+
+
+
+
+util.php
+<?php
+	function login($email, $password){
+		$usuario="";
+
+		if($email == "mariana@ms.mx" && $password = "1234"){
+			$usuario = "mariana"
+		}
+	}
+?>
+
+
+
+
+
+
+
+	M A N D A R	U N A 	I M A G E N 	U S A N D O 	H T T P
+
+
+
+
+enctype = "multipart/form-data"		permite enviar un archivo por partes al servidor
+
+$_FILES["nombre_input"]["atributo"]			es una matriz donde
+
+
+posteriormente lo guardo en disco		conviene guardarlo en uploads/
+
+
+
+
+se checa que el archivo exista
+se checa el tamaño del archivo en caso de tener almacenamiento limitado
+se puede validar el tipo de archivo 
+
+el tipo de dato para guardar archivos es blob (binary large object)
+
+conviene buscar el archivo por su ruta y nombre (alguno de los dos)
