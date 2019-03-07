@@ -9,7 +9,7 @@
 	echo '<div class = "container">';
 		echo '<div class="card">';
 	    	echo '<div class="card-image waves-effect waves-block waves-light">';
-	      		echo '<img class="activator" height="400 px" src="images/golf2.png">';
+	      		echo '<img class="activator" height="500 px" src="images/golf2.png">';
 	    	echo '</div>';
 	    	echo '<div class="card-content">';
 	      		echo '<span class="card-title activator grey-text text-darken-4">'.$_SESSION["nom"].'<i class="material-icons right">more_vert</i></span>';
