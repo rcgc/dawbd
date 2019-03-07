@@ -1,0 +1,17 @@
+NOTA: usar innoDb cuando se trabaje con phpmyadmin 
+
+* innoDb es lo más cercano a mysql
+
+
+mysqli 	me permite manejar a la base de datos como si fuera un objeto
+	comparado con la vieja funcion mysql
+
+
+En un entorno de produccion se tienen que desactivar la configuracion
+que es para entornos de desarrollo, por ejemplo, los logs relacionados 
+con los warnings
+
+
+desde php myadmin se debe que gestionar los permisos que un usuario debe que
+tener, por ejemplo algunos solo modificaran los datos y otros modificar la 
+estructura de los datos, etc.

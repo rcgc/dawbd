@@ -2,6 +2,8 @@
 
   require_once("util.php");
 
+  session_start();
+
   if(isset($_POST["submit"])) {
         $_POST["email"] = htmlentities($_POST["email"]);
         //$_POST["password"] = htmlentities($_POST["password"]);
@@ -14,6 +16,13 @@
         $_POST["telephone"] = htmlentities($_POST["telephone"]);
         $_POST["gender"] = htmlentities($_POST["gender"]);
 
+        $_SESSION["correo"] = $_POST["email"];
+        $_SESSION["nom"] = $_POST["first_name"];
+        $_SESSION["apellido1"] = $_POST["last_name1"];
+        $_SESSION["apellido2"] = $_POST["last_name2"];
+        $_SESSION["cumple"] = $_POST["birthdate"];
+        $_SESSION["tel"] = $_POST["telephone"];
+        $_SESSION["genero"] = $_POST["gender"];
 
         if (isset($_POST["email"]) 
             && isset($_POST["first_name"]) && isset($_POST["last_name1"])
@@ -32,8 +41,10 @@
                     echo "<div class ='card-panel green accent-2'>";
                       echo "<div class = 'center-align'>";
                         
-                        echo "Se ha resitrado exitosamente al usuarioo: ".$_POST["first_name"];
-                        echo '<a class="waves-effect waves-light btn">Aceptar</a>';
+                        echo "Se ha registrado exitosamente al usuario: ".$_POST["first_name"];
+                        
+                          btnperfil();
+                          //<a class="waves-effect waves-light btn" onclick="location.href = './perfil_jugador.php';">Ir a ejercicio</a>
 
                       echo "</div>";
                     echo "</div>";
@@ -47,7 +58,7 @@
                 
                 //$info = "Se guardó el participante: ".$_POST["first_name"]." ".$_POST["last_name1"];
                 //info($info);
-                include("includes/_footer.html");
+                //include("includes/_footer.html");
 
               
        } else {

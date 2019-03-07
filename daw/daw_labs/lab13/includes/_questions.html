@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div class='container'>
+		<p><strong>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</strong></p>
+			<div class="s4 offset-s6">
+				<!-- Modal Trigger -->
+  				<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Answer 1</a>
+
+			  	<!-- Modal Structure -->
+  				<div id="modal1" class="modal">
+    				<div class="modal-content">
+      					<h4>Respuesta</h4>
+      					<p>Para con ello borrar los datos registrados en la sesión, así como también deshacer las variables que fueron declaradas en esta.</p>
+    				</div>
+    				<div class="modal-footer">
+      					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+    				</div>
+  				</div>
+			</div>
+		<br>
+		
+		<p><strong>¿Cuál es la diferencia entre una variable de sesión y una cookie?</strong></p>
+		<div class="s4 offset-s6">
+				<!-- Modal Trigger -->
+  				<a class="waves-effect waves-light btn modal-trigger" href="#modal2">Answer 2</a>
+
+			  	<!-- Modal Structure -->
+  				<div id="modal2" class="modal">
+    				<div class="modal-content">
+      					<h4>Respuesta</h4>
+                <p>La cookie se guarda en un archivo en el servidor, mientras que la variable de sesión es un espacion en memoria.</p>
+    				</div>
+    				<div class="modal-footer">
+      					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+    				</div>
+  				</div>
+			</div>
+		<br>
+
+		<p><strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong></p>
+		<div class="s4 offset-s6">
+				<!-- Modal Trigger -->
+  				<a class="waves-effect waves-light btn modal-trigger" href="#modal3">Answer 3</a>
+
+			  	<!-- Modal Structure -->
+  				<div id="modal3" class="modal">
+    				<div class="modal-content">
+      		      <h4>Respuesta</h4>
+                <p>Renombra los archivos de acuerdo a una nomenclatura preestablecida.</p>		
+    				</div>
+    				<div class="modal-footer">
+      					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+    				</div>
+  				</div>
+			</div>
+		<br>
+
+		<p><strong>¿Qué es CSRF y cómo puede prevenirse?</strong></p>
+		<div class="s4 offset-s6">
+				<!-- Modal Trigger -->
+  				<a class="waves-effect waves-light btn modal-trigger" href="#modal4">Answer 4</a>
+
+			  	<!-- Modal Structure -->
+  				<div id="modal4" class="modal">
+    				<div class="modal-content">
+      					<h4>Respuesta</h4>
+                <p>La técnica llamada falsificación de petición en sitios cruzados, proviene de su nombre en inglés Cross Site Request Forgery (CSRF o XSRF). Este ataque fuerza al navegador web de su víctima, validado en algún servicio (como por ejemplo correo o home banking) a enviar una petición a una aplicación web vulnerable.</p>
+
+                <p>Esta aplicación se encarga de realizar la acción elegida a través de la víctima, debido que la actividad maliciosa será procesada en nombre del usuario logueado. Al contrario de los ataques conocidos como Cross Site Scripting (su traducción sería ordenes en sitios cruzados – XSS) los cuales explotan la confianza del usuario para con un sitio particular; el Cross Site Request Forgery explota la confianza que un sitio web tiene en un usuario particular.</p>
+
+                <p>Algunas buenas prácticas son: </p>
+
+                <p>- Configurar el navegador para que no recuerde usuarios y contraseñas. El modo incógnito es una buena alternativa (Ctrl+Shift+P).</p>
+                <p>- Recordar cerrar la sesión cuando ya no se vaya a hacer uso de la aplicación y/o servicio.</p>
+                <p>- Se recomienda no utilizar la funcionalidad de aplicaciones web que permiten mantener la sesión abierta o recordar sesión.</p>
+                <p>- Utilizar diferentes navegadores, uno para información sensible y otro para navegación en general.</p>
+                <p>- Utilizar complementos que bloqueen la ejecución de scripts. Así los formularios que se envíen por el metodo POST, no podrán ser enviados automáticamente sin el consentimiento del usuario.</p>
+
+    				</div>
+    				<div class="modal-footer">
+      					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+    				</div>
+  				</div>
+			</div>
+		<br>
+	</div>
+
+</body>
+</html>

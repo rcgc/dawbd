@@ -1,0 +1,34 @@
+port:	10.25.18.106,10433 
+
+usr: 	a1702388
+psw: 	idilehur
+
+
+
+
+
+
+
+Subconsultas
+
+Store procedure es un proceso que puedo almacenar en una base de datos
+
+Si utilizo funciones agregadas e involucro columnas que no las usan, SIEMPRE uso un group by
+
+SELECT DISTINCT M.Clave,Descripcion, SUM(Cantidad) as 'Total de Unidades'
+FROM Materiales M, Entregan E
+WHERE M.Clave = E.Clave
+GROUP BY M.Clave,Descripcion
+
+
+
+SELECT DISTINCT M.Clave,Descripcion, SUM(Cantidad) as 'Total de Unidades'
+FROM Materiales M, Entregan E
+WHERE M.Clave = E.Clave
+GROUP BY M.Clave,Descripcion
+
+HAVING SUM(Cantidad) >1000		En vez del 1000 puedo usar una consulta la cual debera que devolverme un escalar
+ORDER BY 'Total de Unidades'
+
+
+Granularidad: nivel de detalle al que se desea almacenar la información

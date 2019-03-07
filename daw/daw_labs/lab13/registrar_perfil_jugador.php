@@ -2,7 +2,7 @@
 
 	require_once("util.php");
 	
-	encabezado();
+	navbar();
 
 	set_tab_lab_number(13);
 
