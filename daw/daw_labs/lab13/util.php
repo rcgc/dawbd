@@ -31,7 +31,7 @@
 
     function ejercicio2(){
         include("includes/_filesupload.html");
-        include("filesupload.php");
+        //include("filesupload.php");
     }
 
     function ep(){

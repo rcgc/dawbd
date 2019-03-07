@@ -21,7 +21,9 @@
 	ep();
 
 	questions();
-	
+
+	//phpinfo();
+
 	footer();
 
 ?>
