@@ -13,6 +13,14 @@
 	imprimir_subtitulo("<div class='container'><h3 class='left-align'>Ejercicio 1: php y consultas dinámicas a la base de datos</h3></div><br>");
 
 	ejercicio_db1();
+	
+	echo '<hr>';
+	
+	imprimir_subtitulo("<div class='container'><h3 class='left-align'>Ejercicio 2</h3></div><br>");
+	
+	players();
+	
+	echo '<hr>';
 
 	imprimir_subtitulo("<div class='container'><h3 class='left-align'>Preguntas</h3></div><br>");
 	
