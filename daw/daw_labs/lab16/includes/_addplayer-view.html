@@ -5,51 +5,46 @@
 </head>
 <body>
 	
+	<h4 class="center-align">Agregar jugador</h4><br>
+	
 	<div class="row">
     	<form class="col s4 offset-s4" method="post">
-    		<div class="card-panel teal lighten-4">
+    		<div class="card-panel">
 	      		<div class="row">
 
 	      			<div class="input-field col s12">
 	      				<h5 class="center-align">Datos de participante</h5>
 	      			</div>
 
-			        <div class="input-field col s12">
+	        		<div class="input-field col s12 m12 l12">
+          				<input id="name" name="name" type="text">
+          				<label for="name">Name*</label>
+        			</div>
+        			
+        			<div class="input-field col s12">
 	          			<input id="email" name="email" type="email" class="validate">
 	          			<label for="email">Email*</label>
 	          			<span class="helper-text" data-error="E-mail inválido" data-success="E-mail válido"></span>
 	        		</div>
-
-	        		<div class="input-field col s12">
-	          			<input id="password" name="password" type="password" class="validate">
-          				<label for="password">Password*</label>
-	          			<span class="helper-text" data-error="Dato incorrecto" data-success="Contraseña válida"></span>
-	        		</div>
-
-	        		<div class="input-field col s12 m12 l12">
-          				<input id="first_name" name="first_name" type="text">
-          				<label for="first_name">First Name*</label>
+	        		
+	        		<div class="input-field col s12 m12 l6">
+          				<input id="telephone" name="telephone" type="text" class="validate">
+          				<label for="telephone">Telephone*</label>
         			</div>
         			
         			<div class="input-field col s12 m12 l6">
-          				<input id="last_name1" name="last_name1" type="text">
-          				<label for="last_name1">Last Name 1*</label>
+          				<input id="club" name="club" type="text">
+          				<label for="club">Club*</label>
         			</div>
-
+        			
         			<div class="input-field col s12 m12 l6">
-          				<input id="last_name2" name="last_name2" type="text">
-          				<label for="last_name2">Last Name 2*</label>
+          				<input id="handicap" name="handicap" type="text">
+          				<label for="handicap">Handicap*</label>
         			</div>
-
-        			<div class="input-field col s12">
-        				<input id="birthdate" name="birthdate" type="text" class="datepicker">
-        				<label for="birthdate">Birthday*</label>
-        				<span class="helper-text">Click to display calendar</span>
-        			</div>
-
-        			<div class="input-field col s12">
-          				<input id="telephone" name="telephone" type="text" class="validate">
-          				<label for="telephone">Telephone number*</label>
+        			
+        			<div class="input-field col s12 m12 l6">
+          				<input id="category" name="category" type="text">
+          				<label for="category">Category*</label>
         			</div>
 
         			<div class="input-field col s12">
@@ -62,6 +57,7 @@
         						<span>Male</span>
       						</label>
     					</p>
+    					
     					<p>
       						<label>
         						<input id="rb2" name="gender" type="radio" value="Femenino" />
@@ -71,7 +67,7 @@
     					<span class="helper-text">*Obligatorio</span>
         			</div>
 
-        			<div class="s4 offset-s6">
+        			<div class="col s4 m4 l4">
         				<input type="submit" class="waves-effect waves-light btn" id="submit" name="submit" value="Enviar">
         			</div>
 
@@ -79,6 +75,8 @@
       		</div>
     	</form>
   	</div>
+  	
+  	<br>
 
 </body>
 </html>

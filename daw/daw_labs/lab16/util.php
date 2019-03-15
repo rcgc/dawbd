@@ -104,8 +104,8 @@
     function showTable($result){
         echo '<div class = "container">';
             echo '<div class= "center-align">';
-                echo '<table>';
-                    echo '<caption>Players</caption>';
+                echo '<table class="striped">';
+                    echo '<caption class="teal lighten-2"><strong><p class="white-text">Players</p></storng></caption>';
                     echo '<thead>';
                         echo '<th>Id</th>';
                         echo '<th>Name</th>';
@@ -139,6 +139,35 @@
                 echo '</table>';
             echo '</div>';
         echo '</div>';
+        
+    }
+    
+    function insert_player_model(){
+        include ("registro_jugador.php");
+    }
+    
+    function insert_player($name, $handicap, $category, $club, $email, $telephone, $gender){
+        $conn = connectDb();
+        
+        $sql = "INSERT INTO players (name, handicap, category, club, email, telephone, gender) VALUES (\"". $name ."\",". $handicap. ",\"". $category . "\",\"". $club ."\",\"". $email ."\",". $telephone .",\"". $gender ."\");";
+        
+        if(mysqli_query($conn, $sql)){
+            echo "New record created successfully";
+            closeDb($conn);
+            return true;
+        } else {
+            echo "Error: ". $sql . "<br>". mysqli_error($conn);
+            closeDb($conn);
+            return false;
+        }
+        closeDb($conn);
+    }
+    
+    function deletePlayerByName($name){
+        
+    }
+    
+    function updatePlayerByName($name){
         
     }
 

@@ -15,7 +15,25 @@
   				<div id="modal1" class="modal">
     				<div class="modal-content">
       					<h4>Respuesta</h4>
-      					<p>Answer modal.</p>
+      					
+      					<p>Para respetar el principio de la responsabilidad única. Es decir, una parte del código 
+      					no debe de saber qué es lo que hace toda la aplicación, sólo debe de tener una responsabilidad. 
+      					He aquí una breve descripción del MVC:</p>
+      					
+      					<br>
+      					
+      					<h5>Modelo</h5>
+      					<p>Se encarga de los datos, generalmente (pero no obligatoriamente) consultando la base de datos. 
+      					Actualizaciones, consultas, búsquedas, etc. todo eso va aquí, en el modelo.</p>
+      					
+      					<h5>Vista</h5>
+      					<p>Se encarga de... controlar, recibe las órdenes del usuario y se encarga de solicitar los datos 
+      					al modelo y de comunicárselos a la vista.</p>
+      					
+      					<h5>Controlador</h5>
+      					<p>Son la representación visual de los datos, todo lo que tenga que ver con la interfaz gráfica
+      					va aquí. Ni el modelo ni el controlador se preocupan de cómo se verán los datos, esa responsabilidad
+      					es únicamente de la vista.</p>
       					
     				</div>
     				<div class="modal-footer">
@@ -34,7 +52,34 @@
   				<div id="modal2" class="modal">
     				<div class="modal-content">
       					<h4>Respuesta</h4>
-                		<p>Answer modal.</p>
+                		<p>
+                			A SQL injection attack consists of insertion or "injection" of a 
+                		SQL query  via the input data from the client to the application. 
+                		A successful SQL injection exploit can read sensitive data from 
+                		the database, modify database data (Insert/Update/Delete), 
+                		execute administration operations on the database 
+                		(such as shutdown the DBMS), recover the content of a given file 
+                		present on the DBMS file system and in some cases issue commands 
+                		to the operating system. SQL injection attacks are a type of injection 
+                		attack, in which SQL commands are injected into data-plane input in order 
+                		to effect the execution of predefined SQL commands.
+                		</p>
+
+						<br>
+						
+                		<p>Primary Defenses:</p>
+
+						<p>Option 1: Use of Prepared Statements (with Parameterized Queries)</p>
+						<p>Option 2: Use of Stored Procedures</p>
+						<p>Option 3: White List Input Validation</p>
+						<p>Option 4: Escaping All User Supplied Input</p>
+						
+						<br>
+						
+						<p>Additional Defenses:</p>
+
+						<p>Also: Enforcing Least Privilege</p>
+						<p>Also: Performing White List Input Validation as a Secondary Defense</p>
 						
     				</div>
     				<div class="modal-footer">
