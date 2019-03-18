@@ -15,7 +15,7 @@
           && $_POST["name"] != "" && $_POST["email"] != "" 
           && $_POST["telephone"] != "" && $_POST["club"] != ""
           && $_POST["handicap"] != "" && $_POST["category"] != ""
-          ) {
+          && insert_player($_POST["name"], $_POST["handicap"], $_POST["category"], $_POST["club"], $_POST["email"], $_POST["telephone"], $_POST["gender"])) {
                 
               
                 //header("Location: includes/_registro_jugador.html");
@@ -27,7 +27,7 @@
                         
                         echo "<p><strong>Se ha registrado exitosamente al usuario </strong></p><p>".$_POST["name"]. "</p>";
                         include("includes/_btn_aceptar.html");
-                        insert_player($_POST["name"], $_POST["handicap"], $_POST["category"], $_POST["club"], $_POST["email"], $_POST["telephone"], $_POST["gender"]);
+                        
 
                       echo "</div>";
                     echo "</div>";

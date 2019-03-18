@@ -70,6 +70,18 @@
         return $result;
     }
     
+    function getNamePlayers(){
+        $conn = connectDb();
+        
+        $sql = "SELECT name FROM players";
+        
+        $result = mysqli_query($conn, $sql);
+        
+        closeDb($conn);
+        
+        return $result;
+    }
+    
     function getPlayersByName($playerName){
         
         $conn = connectDb();
@@ -152,7 +164,7 @@
         $sql = "INSERT INTO players (name, handicap, category, club, email, telephone, gender) VALUES (\"". $name ."\",". $handicap. ",\"". $category . "\",\"". $club ."\",\"". $email ."\",". $telephone .",\"". $gender ."\");";
         
         if(mysqli_query($conn, $sql)){
-            //echo "Click actualizar tabla";
+            echo "New record created successfully";
             closeDb($conn);
             return true;
         } else {
@@ -164,48 +176,11 @@
     }
     
     function deletePlayerByName($name){
-        $conn = connectDb();
         
-        $sql = "DELETE FROM players WHERE name LIKE '". $name ."'";
-        
-        $result = mysqli_query($conn, $sql);
-        
-        closeDb($conn);
-        
-        return $result;
     }
     
-    function getPlayerByName($name){
+    function updatePlayerByName($name){
         
-        $conn = connectDb();
-        
-        $sql = "SELECT name FROM players WHERE name LIKE '".$name."'";
-        
-        $result = mysqli_query($conn, $sql); 
-        
-        closeDb($conn);
-        return $result;
-        
-    }    
-    
-    function delete_player_model(){
-        include("eliminar_jugador.php");
     }
-    
-    function updatePlayerByName($name, $handicap, $category, $club, $email, $telephone, $gender){
-        $conn = connectDb();
-        
-        $sql = "UPDATE players SET name='".$name."', handicap=".$handicap.", category='".$category."', club='".$club."', email='".$email."', telephone=".$telephone.", gender='".$gender."' WHERE name LIKE '". $name ."'";
-        
-        $result = mysqli_query($conn, $sql);
-        
-        closeDb($conn);
-        
-        return result;
-    }
-    
-    function edit_player_model(){
-        include("editar_perfil_jugador.php");
-    }
-    
+
 ?>  

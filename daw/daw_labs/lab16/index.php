@@ -22,10 +22,12 @@
 	echo '<hr>';
 	
 	imprimir_subtitulo("<div class='container'><h3 class='left-align'><i class='material-icons medium'>delete</i> Borrar registros de una BD</h4></div><br>");
+	delete_player_model();
 	
 	echo '<hr>';
 	
 	imprimir_subtitulo("<div class='container'><h3 class='left-align'><i class='material-icons medium'>edit</i> Modificar registros de una BD</h4></div><br>");
+	edit_player_model();
 	
 	echo '<hr>';
 
