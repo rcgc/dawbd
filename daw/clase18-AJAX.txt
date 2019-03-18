@@ -1,0 +1,21 @@
+Asynchronous	tecnología del lado del servidor (php, asp, node, jsp, ...)
+JavaScript	tecnología del lado del cliente (js)
+And		
+XML		Medio de comunicación (XML, texto, html, json, ...)
+
+
+pedir algo a la bse de datos uso GET 
+modificar algo en la base de datos uso un POST
+
+
+JavaScript es una implementación del estándar ECMAscript
+ActiveX empezó a implementar EMCAscript a partir del navegador Internet Explorer 7
+
+0 lista
+1 se abrio
+2 ya llego
+3 el aknowledge
+El estado 4 es cuando ya recibí la respuesta (obtengo AJAX response)
+
+
+cambiar linea 3 para conectar y recuperar registros de nuestra BD
