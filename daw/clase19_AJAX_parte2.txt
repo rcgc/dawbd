@@ -1,0 +1,15 @@
+callback()	es una funcion que se ejecuta despues de que un evento externo la detona
+
+jquery es una libreria que permite usar la tecnica ajax de una forma sencilla
+
+hay una funcion jQuery.post() jQuery.get() o jQuery() y acepta un parametro extra que es 
+el tipo de peticion
+
+
+a la funcion la pasamos como tal un objeto tipo json
+
+
+json es un conjunto de atributos con valores
+
+$.("#id").html(data);	
+es lo equivalente a getElementById("id").innerHTML = data;
