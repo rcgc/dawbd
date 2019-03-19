@@ -79,7 +79,19 @@
         
         closeDb($conn);
         
+        //var_dump($result);
+        
         return $result;
+    }
+    
+    function cargarArreglo(){
+        $result = getNamePlayers();
+        $aux = array();
+        while($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
+            array_push($aux, $row["name"]);
+        }
+        
+        return $aux;
     }
     
     function getPlayersByName($playerName){
