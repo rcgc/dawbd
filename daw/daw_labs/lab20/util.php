@@ -11,5 +11,4 @@
     function footer(){
         include("includes/_footer.html");
     }
-
 ?>
