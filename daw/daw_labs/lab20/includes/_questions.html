@@ -1,0 +1,191 @@
+<div class='container'>
+	<p><strong>Explica y elabora un diagrama sobre cómo funciona AJAX con jQuery.</strong></p>
+		<div class="s4 offset-s6">
+			<!-- Modal Trigger -->
+  			<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Answer 1</a>
+
+		  	<!-- Modal Structure -->
+  			<div id="modal1" class="modal">
+				<div class="modal-content">
+  					<h4>Respuesta</h4>
+  					
+  					<table class='highlight'>
+  						<caption>Js, JQuery & AJAX</caption>
+  						<thead>
+  							<tr>
+  								<th>Herramienta</th>
+  								<th>Descripción</th>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<th>JavaScript</th>
+  								<td>Es un lenguaje de programación conocido por ser interpretado por los navegadores de páginas web</td>
+  							</tr>
+  							<tr>
+  								<th>JQuery</th>
+  								<td>Es una librería de JavaScript, escrita por John Resig que surgió en el 2006 para solucionar
+  								las diferencias al manipular HTML y escuchar eventos en los navegadores. Aunque ya existían intentos
+  								similares en JavaScript, una de las genialidades de jQuery era que utilizaba los mismo selectores CSS
+  								para ubicar y manipular los diferentes elementos del DOM.</td>
+  							</tr>
+  							<tr>
+  								<th>AJAX</th>
+  								<td>AJAX es una técnica que permite, mediante programas escritos en Javascript, que un servidor y 
+  								un navegador intercambien información, posiblemente en XML, de forma asíncrona</td>
+  							</tr>
+  						</tbody>
+  						<tfoot></tfoot>
+  					</table>
+  					
+  					<br>
+  					<br>
+  					
+  					<div class='row center-align'>
+  						<div class='col s10 m10 l10 offset-s1 offset-m1 offset-l1'>
+  							<img src="images/ajax_img.png" alt="Ajax diagram">
+  						</div>
+  					</div>
+  					<div class='row center-align'>
+  						<div class='col s10 m10 l10 offset-s1 offset-m1 offset-l1'>
+  							<p>*Diagrama de modelo clásico de web apps vs modelo AJAX de web apps</p>
+  						</div>
+  					</div>
+  					
+  					<br>
+  					
+  					<h5 class='center-align'>XMLHttpRequest.readyState</h5>
+  					
+  					<br>
+  					
+  					<p>La propiedad XMLHttpRequest.readyState retorna el estado en que un cliente XMLHttpRequest está. Un cliente XHR
+  					existe en uno de los siguientes estados:</p>
+  					
+  					<br>
+  					
+  					<table class='highlight'>
+  						<caption>XMLHttpRequest.readyState</caption>
+  						<thead>
+  							<tr>
+  								<th>Value</th>
+  								<th>State</th>
+  								<th>Description</th>
+  							</tr>
+  						</thead>
+  						<tbody>
+  							<tr>
+  								<th>0</th>
+  								<td>UNSET</td>
+  								<td>The XMLHttpRequest client has been created, but the open() method hasn't been called yet.</td>
+  							</tr>
+  							<tr>
+  								<th>1</th>
+  								<td>OPENED</td>
+  								<td>open() method has been invoked. During this state, the request headers can be set using the 
+  								setRequestHeader() method and the send() method can be called which will initiate the fetch.</td>
+  							</tr>
+  							<tr>
+  								<th>2</th>
+  								<td>HEADERS_RECEIVED</td>
+  								<td>send() has been called and the response headers have been received.</td>
+  							</tr>
+  							<tr>
+  								<th>3</th>
+  								<td>LOADING</td>
+  								<td>Response's body is being received. If responseType is "text" or empty string, responseText 
+  								will have the partial text response as it loads.</td>
+  							</tr>
+  							<tr>
+  								<th>4</th>
+  								<td>DONE</td>
+  								<td>The fetch operation is complete. This could mean that either the data transfer has been completed 
+  								successfully or failed.</td>
+  							</tr>
+  						</tbody>
+  						<tfoot></tfoot>
+  					</table>
+  					
+				</div>
+				<div class="modal-footer">
+  					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+				</div>
+  			</div>
+		</div>
+	<br>
+	
+	<p><strong>¿Qué alternativas a jQuery existen?</strong></p>
+	<div class="s4 offset-s6">
+			<!-- Modal Trigger -->
+  			<a class="waves-effect waves-light btn modal-trigger" href="#modal2">Answer 2</a>
+
+		  	<!-- Modal Structure -->
+  			<div id="modal2" class="modal">
+				<div class="modal-content">
+
+  					<h4>Respuesta</h4>
+            		
+            		<table class='highlight'>
+            			<caption>Alternativas gratuitas</caption>
+            			<thead>
+            				<tr>
+            					<th>Herramienta</th>
+            					<th>Descripción</th>
+            					<th>Ventajas</th>
+            					<th>Desventajas</th>
+            				</tr>
+            			</thead>
+            			<tbody>
+            				<tr>
+            					<th>UmbrellaJS</th>
+            					<td>Es una librería fuertemente influenciada por jQuery, pero mucho más comprimida y limitada</td>
+            					<td>Sólo pesa 4kb comprimida, por lo tanto su tiempo de carga es apto para dispositivos móviles</td>
+            					<td>Limitada a la manipulación DOM, eventos y Ajax</td>
+            				</tr>
+            				<tr>
+            					<th>Webix</th>
+            					<td>Es un framework que nos provee una forma fácil de crear elementos comunes de una interfaz de 
+            					usuario, comparte elementos de uso comun con JQuery</td>
+            					<td>La difusión de información acerca de este framework permite que siempre existan tutoriales con
+            					datos recientes</td>
+            					<td>Hay elementos tales como date-range pickers, selectors, shedulers que para ser usados requieren
+            					de la versión premium</td>
+            				</tr>
+            				<tr>
+            					<th>Zepto.js</th>
+            					<td>Librería tipo minimalista</td>
+            					<td>Compatible con JQuery y especialmente dirigida a entornos muy exigentes en rendimiento</td>
+            					<td>.</td>
+            				</tr>
+            				<tr>
+            					<th>XUI</th>
+            					<td>Librería tipo minimalista enfocada para dispositivos móviles</td>
+            					<td>Su sintaxis es heredera de JQuery</td>
+            					<td>Al ser relativamente nueva (lanzada desde 2008) cuenta con poca madurez y tutoriales</td>
+            				</tr>
+            				<tr>
+            					<th>Sizzle</th>
+            					<td>Es una librería selectora, es decir, sólo necesitamos la capacidad de utilizar los selectores 
+            					de tipo CSS y asociar después un determinado evento sobre los mismos a mano</td>
+            					<td>Completamente independiente. No requiere de ninguna dependencia, 
+            					altamente extensible mediante una sencilla y potente API y sólo pesa 4 kb</td>
+            					<td>.</td>
+            				</tr>
+            				<tr>
+            					<th>Sprint.js</th>
+            					<td>Es un framework compatible con los conocimientos de JQuery</td>
+            					<td>Más rápido que JQuery y Zepto.js</td>
+            					<td>No tiene soporte para versiones viejas de navegadores</td>
+            				</tr>
+            			</tbody>
+            			<tfoot></tfoot>
+            		</table>
+
+				</div>
+				<div class="modal-footer">
+  					<a href="#!" class="modal-close waves-effect waves-green btn-flat">Salir</a>
+				</div>
+  			</div>
+		</div>
+	<br>
+	<br>
+</div>
