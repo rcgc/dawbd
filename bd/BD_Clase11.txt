@@ -1,0 +1,23 @@
+DML: Lenguaje de Manipulación de Datos
+
+
+ALGORITMOS EN BD 
+- 2FaceCommit
+
+- Algoritmos de serialización
+
+
+Los gestores que son buenos hacen un bloqueo a nivel de campo
+
+Los otros te bloquean el archivo, la tabla, etc.
+
+
+C A R A C T E R I S T I C A S
+D E
+L A S
+T R A N S A C C I O N E S
+
+Aislamiento
+Atomicidad
+Durabilidad
+Coherencia

@@ -1,0 +1,4 @@
+mailgun es un servicio encargado de enviar correos, te cobra después de 10,000 correos
+
+para autentificación:
+			facebook, google
