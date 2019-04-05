@@ -1,0 +1,48 @@
+<h2>Registra un incidente</h2>
+<div class="row">
+  
+    <form class="col s12" method="POST">
+      
+      <div class="row">
+          <div class="input-field col s12">
+            <select id="lugar_incidente" name="lugar_incidente">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Centro turístico">Centro turístico</option>
+              <option value="Laboratorios">Laboratorios</option>
+              <option value="Restaurante">Restaurante</option>
+              <option value="Centro operativo">Centro operativo</option>
+              <option value="Triceratops">Triceratops</option>
+              <option value="Dilofosaurios">Dilofosaurios</option>
+              <option value="Velociraptors">Velociraptors</option>
+              <option value="TRex">TRex</option>
+              <option value="Planicie de los herbívoros">Planicie de los herbívoros</option>
+            </select>
+            <label>¿Dónde es el incidente?</label>
+          </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+            <select id="tipo_incidente" name="tipo_incidente">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Falla eléctrica">Falla eléctrica</option>
+              <option value="Fuga de herbívoro">Fuga de herbívoro</option>
+              <option value="Fuga de Velociraptor">Fuga de Velociraptor</option>
+              <option value="Fuga de TRex">Fuga de TRex</option>
+              <option value="Robo de ADN">Robo de ADN</option>
+              <option value="Auto descompuesto">Auto descompuesto</option>
+              <option value="Visitantes en zona no autorizada">Visitantes en zona no autorizada</option>
+            </select>
+            <label>¿Cuál es el incidente?</label>
+        </div>
+      </div>
+      
+      <div class="row">
+          <button class="btn waves-effect waves-light" id="registrar" name="registrar">Registrar
+                <i class="material-icons right">send</i>
+          </button>
+      </div>
+      
+    </form>
+    
+  </div>

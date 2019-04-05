@@ -1,0 +1,53 @@
+<h2>Registra un incidente</h2>
+<div class="row">
+  
+    <form class="col s12" method="POST">
+      
+      <div class="row">
+          <div class="input-field col s12">
+            
+            <div class="selector-pais">
+              <select id="lugar_incidente" name="lugar_incidente">
+              </select>
+            </div>
+            <label>¿Dónde es el incidente?</label>
+          </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          
+            <select id="tipo_incidente" name="tipo_incidente">
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Falla eléctrica">Falla eléctrica</option>
+            </select>
+            
+            <label>¿Cuál es el incidente?</label>
+        </div>
+      </div>
+      
+      <div class="row">
+          <button class="btn waves-effect waves-light" id="registrar" name="registrar">Registrar
+                <i class="material-icons right">send</i>
+          </button>
+      </div>
+      
+    </form>
+    
+    <script></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajax({
+                    type: "POST",
+                    url: "getPaises.php",
+                    success: function(response)
+                    {
+                        $('.selector-pais select').html(response).fadeIn();
+                    }
+            });
+
+        });
+    </script>
+    
+  </div>
