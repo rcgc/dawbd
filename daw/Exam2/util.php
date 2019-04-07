@@ -4,10 +4,6 @@
         include("views/_header.html");
     }
     
-    function incidentes_controller(){
-        include("incidentes.controller.php");
-    }
-    
     function footer(){
         include("views/_footer.html");
     }
@@ -16,7 +12,7 @@
         $servername = "localhost";
         $username = "rcgc";
         $password = "";
-        $dbname = "Incidentes";
+        $dbname = "Jurassic";
         
         $con = mysqli_connect($servername, $username, $password, $dbname);
         
@@ -47,24 +43,24 @@
         
     }
     
-    function spNuevoIncidente($place, $type){
+    function spNuevoIncidente($idplace, $idtype){
         
         $conn = connectDb();
         
-        
-        if (!$conn->query("DROP PROCEDURE IF EXISTS add_incidente") || 
-            !$conn->query("CREATE PROCEDURE add_incidente(IN Lugar VARCHAR(80), Tipo VARCHAR (80)) 
+     /*   
+        if (!$conn->query("DROP PROCEDURE IF EXISTS addIncidente") || 
+            !$conn->query("CREATE PROCEDURE addIncidente(IN uIDLugar INT(11), uIDTipo INT (11)) 
             BEGIN 
-                INSERT INTO incidentes(Lugar, Tipo) VALUES('". $place ."','". $type ."'); 
+                INSERT INTO incidentes(IDLugar, IDTipo) VALUES('". $idplace ."','". $idtype ."'); 
             END;")) {
             
             echo "Falló la creación del procedimiento almacenado: (" . $conn->errno . ") " . $conn->error;
         }
+    */
         
-        $sql="CALL `add_incidente`('".$place."','".$type."')";
+        $sql="CALL `addIncidente`('".$place."','".$type."')";
         $result=mysqli_query($conn, $sql);
         closeDb($conn);
         return $result;
     }
-
 ?>
