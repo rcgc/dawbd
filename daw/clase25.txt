@@ -1,0 +1,18 @@
+La mayoría de las arquitecturas orientadas a servicios iniciaron como estructuras
+monolíticas, aquellas que iniciaron como estructuras bien pensadas han fracasado
+¿por qué? (lo mas probable es que sepa dios)
+
+
+CURL --> Consumir URL
+
+BASADOS EN XML
+
+WSDL --> XML sobre XML sobre XML ...
+SOAP --> Simple Object AS a Protocol
+
+
+
+No BASADOS EN XML
+
+REST
+GRAPH QL
